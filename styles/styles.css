@@ -1,0 +1,224 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+body {
+  background-color: #e6d05c;
+  color: #3d46f5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.loader__bg {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1b1f25;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.loader__bg.is-active {
+  opacity: 0.9;
+  visibility: visible;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid #00b2eb;
+  border-radius: 50%;
+  animation: spinner 1s infinite;
+}
+
+.country__input {
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+}
+
+.country__button {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.country__button:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.country__button:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.country__button:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.country__button:focus {
+  outline: 1px transparent;
+}
+
+.country__button:before {
+  display: none;
+}
+
+.country__button:-webkit-details-marker {
+  display: none;
+}
+
+.table-country {
+  opacity: 1;
+  visibility: visible;
+  transition: 0.1s;
+}
+
+.table-country.loading {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* montserrat-regular - vietnamese_latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-regular.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
+}
+/* montserrat-500 - vietnamese_latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-500.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
+}
+/* montserrat-600 - vietnamese_latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-600.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
+}
+/* montserrat-700 - vietnamese_latin-ext_latin_cyrillic-ext_cyrillic */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../fonts/Montserrat/montserrat-v25-vietnamese_latin-ext_latin_cyrillic-ext_cyrillic-700.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
+}
