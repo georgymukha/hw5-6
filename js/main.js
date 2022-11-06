@@ -48,7 +48,9 @@ let findCountry = function (countryName) {
     </div>
     `);
       $(".country-name").text(`${response.name.official}`);
-      $(".country-capital").text(`${response.capital}`);
+      $(".country-capital").text(
+        `${Object.values(response.capital).join(", ")}`
+      );
       $(".country-currency").text(
         `${Object.keys(response.currencies).join(", ")}`
       );
