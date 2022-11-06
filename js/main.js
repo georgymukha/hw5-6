@@ -79,7 +79,7 @@ let findCountry = function (countryName) {
 
 let makeBorders = function (countryName, flag) {
   $(".borders").append(`
-  <div class="col-5 col-md-2">
+  <div class="col-5 p-1 col-md-2">
   <div
     class="h-100 border-country card justify-content-evenly align-items-center"
   >
