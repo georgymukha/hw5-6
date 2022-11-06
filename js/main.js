@@ -6,6 +6,7 @@ $(".country__button").on("click", function (event) {
   let countryName = $(".country__input").val();
   if (countryName !== "") {
     clear();
+    $(".borders").text("");
     findCountry(countryName);
   } else {
     alert("Enter name of country, please");
