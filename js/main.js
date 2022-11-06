@@ -64,13 +64,13 @@ let findCountry = function (countryName) {
           });
       });
     })
-    .then(async () => {
-      await $(".loader__bg").removeClass("is-active");
-      await $(".table-country").removeClass("loading");
+    .then(() => {
+      $(".loader__bg").removeClass("is-active");
+      $(".table-country").removeClass("loading");
     })
-    .catch(async function () {
-      await alert(`Country "${countryName}" not found`);
-      await $(".loader__bg").removeClass("is-active");
+    .catch(function () {
+      alert(`Country "${countryName}" not found`);
+      $(".loader__bg").removeClass("is-active");
     });
 };
 
